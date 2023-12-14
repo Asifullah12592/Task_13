@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <h1>Assignment-13</h1>
+
+    <script>
+        ///======11111
+        var now = new Date()
+        document.write("<b>(1)</b> :<br>" + now);
+
+        // //===222222
+
+        var now = new Date()
+        var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var a = month[now.getMonth()]
+        document.write("<br><br><b>(2)</b>:<br>" +a);
+
+
+        // //====333
+
+
+        var day = new Date()
+        var days=["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        var b = days[day.getDay()].slice(0,3)
+        document.write("<br><br><b>(3)</b> :<br>Today is " +b);
+
+
+        // //======44444444
+
+
+        var day1 = new Date()
+        var days1= prompt("Enter the Day")
+        // var both = days1[day1.getDay()]
+        // console.log(both)
+        if(days1=="sunday"||days1=="saturday"){
+            document.write("<br><br><b>(4)</b> : <br>It's Fun day")
+        }
+        else{
+            document.write("<br><br><b>(4)</b> : <br>It's not Fun day")
+        }
+
+
+        // //====5555
+
+        var month =new Date()
+        var mo = month.getMonth()
+        if(mo <16){
+            document.write("<br><br><b>(5)</b> : <br>First fifteen days of the month");
+        }
+        else{
+            document.write("<br><br><b>(5)</b>  <br>Last days of the month")
+        }
+
+        // //======666666
+
+        var currentDate = new Date()
+        document.write("<br><br><b>(6)</b> :<br>Current Date : <b>"+currentDate+"</b>")
+        // var currentDate = new Date()
+        var ms = currentDate.getTime()
+        // console.log(ms);
+        // var millis = currentDate /1000
+        document.write("<br>Elapsed milliseconds since January 1,1970 :<b> "+Math.floor(ms)+"</b>");
+        var minuts = ms/60/60
+        document.write("<br>Elapsed minutes since January 1,1970  :<b> "+Math.floor(minuts)+"</b>");
+
+
+        //=====777777
+
+
+        var now = new Date()
+        var am = now.toLocaleTimeString().slice(-2)
+        console.log(am);
+
+        //====8888
+
+        var now = new Date("dec 31 2022")
+        document.write("<br><br><b>(8)  <br> Later date :</b> "+now);
+
+
+        //=====999999
+
+        var now =new Date()
+        var ram = new Date("mar-23-2023")
+        var past = ram.toLocaleDateString()
+        var a = ram.getTime()
+        var b = now - a
+        var c = b /(1000*60*60*24)
+        document.write("<br><br><b>(9)<br> <br>"+Math.floor(c)+"</b> days have passed since 1st ramdan 2023");
+
+
+        //====10,10,10,10,10
+
+
+        var now =new Date()
+        var ram = new Date("dec-5-2015")
+        document.write("<br><br><b>(10)</b><br> One refrence date : "+ram)
+        var past = ram.toLocaleDateString()
+        var a = ram.getTime()
+        var b = now - a
+        var c = b /(1000*60)
+            // console.log(c);
+        document.write("<br><b>"+Math.floor(c)+"</b> seconds had passed since dec-5-2015");
+
+
+        //====== 11,11,11,11
+
+
+            var currentD = new Date()
+           console.log(currentD);
+           now.setHours(now.getHours()-1)
+           console.log(now);
+           document.write("<br><br><b>(11)</b><br> Currunt Date : "+currentD+"<br> 1 hour ago, it was : "+now)
+
+    </script>
+    <script>
+
+        //====12,12,,12,12,
+
+        var Today = new Date()
+        console.log(now);
+        now.setFullYear(now.getFullYear()-100)
+        console.log(now);
+        document.write("<br><br><b>(12)</b><br> Currunt Date : "+Today+"<br> 100 year back, it was : "+now)
+
+
+
+
+
+        //====13,13,13,13,13,13
+
+        var a = new Date(prompt("Enter your birth day", "yyyy/mm/dd"))
+        // var a = new Date("1992-12-27")
+        var b = Date.now() - a.getTime()
+        var age = new Date(a)
+        var year = age.getUTCFullYear()
+        var age_age = Math.abs(year - 2023)
+        document.write("<br><br><b>(13)</b><br>age of the date entered <b> " + age_age + " </b>year <br>your birth year is <b> " + year + "</b>");
+
+
+        var customerName = "Hafiz Asifullah"
+        var m = new Date()
+        var monthName =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var add =monthName[m.getMonth()]
+        // console.log(add);
+        var numUnits = 220
+        var charagesPU = 22
+        var dueDate=numUnits*charagesPU
+        var lPament= 550
+        var l_amount =dueDate+lPament
+        document.write("<br><br><b>(14)<br> Customer Name:</b> "+customerName+"<b><br>Month: </b>"+add+"<br><b>Number of Units: </b>"+numUnits+
+        "<b><br>Charges per unit: </b>"+charagesPU+"<br><b>Net Amount Payable (with Due Date): </b>"+dueDate+"<br><b>Late payment surchage: </b>"+lPament+"<br><b>Gross Amount Payable (After Due Date): </b>"+l_amount);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
